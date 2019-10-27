@@ -2,7 +2,7 @@
   "name": "nine-coding-challenge123",
   "version": "1.0.0",
   "description": "nine coding challenge",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
