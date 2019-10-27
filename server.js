@@ -10,7 +10,12 @@ app.use(
 )
 app.use(bodyParser.json())
 
-app.get('*', (req, res) => {
+app.use(function(req, res, next) {
+  res.setHeader("Content-Type", "application/json");
+  next();
+});
+
+app.post('*', (req, res) => {
   const data = returnReq(req.body);
   res.status(200).send({
     response: data
