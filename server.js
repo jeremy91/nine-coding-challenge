@@ -10,7 +10,7 @@ app.use(
 )
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   const data = returnReq(req.body);
   res.status(200).send({
     response: data
